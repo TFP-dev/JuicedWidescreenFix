@@ -1,6 +1,8 @@
 # JuicedWidescreenFix
 Juiced Widescreen fix + custom FOV mod
 
+This mod automaticaly detects your screen aspect ratio.
+
 # Instalation
 
 1. Install Ultimate ASI Loader https://github.com/ThirteenAG/Ultimate-ASI-Loader
