@@ -36,12 +36,18 @@ void Widescreen::Initialise()
     if (sFov == 0)
         fov = 0;
     
-    if (AspectRatio == 16.0f / 9.0f) // 16:9
-        SetAspectRatio(1, fov);
-    else if (AspectRatio == 15.0f / 9.0f) // 15:9
-        SetAspectRatio(1.066666, fov);
-    else if (AspectRatio == 21.0f / 9.0f) // 21:9
-        SetAspectRatio(0.8, fov);
+    if (AspectRatio == 16.0f / 10.0f) // 16:10 (Default)
+    {
+        SetAspectRatio(1.15, fov);
+    }
+    else
+    {
+        float NewAspectRatio = 16.0f / (static_cast<float>(ResWidth) / (static_cast<float>(ResHeight) / 9.0f));
+        SetAspectRatio(NewAspectRatio, fov);
+    }
+       
+
+    
 }
 
 void Widescreen::SetAspectRatio(float aspectRatio, float fov) 
